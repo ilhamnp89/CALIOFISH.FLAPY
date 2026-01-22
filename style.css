@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #dff6ff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.hidden { display: none; }
+
+.characters img {
+  width: 60px;
+  margin: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.characters img.selected {
+  border: 3px solid red;
+}
+
+/* Canvas hanya muncul saat game start */
+#gameCanvas {
+  display: none;
+  background: #87ceeb;
+  width: 100%;
+  height: 100vh;
+  touch-action: none;
+  position: relative;
+  z-index: 0;
+}
+
+#menu, #characterSelect, #gameOverScreen {
+  position: relative;
+  z-index: 10; /* selalu di atas canvas */
+}
+
+#scoreBoard {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#gameOverScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffffdd;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
